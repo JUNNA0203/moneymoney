@@ -78,3 +78,8 @@ function createProcess(year, month) {
 function todaydate(yaer,month,count){
 window.location.href='./homegamen?year='+ yaer +'&month='+ (month + 1) + '&day='+ count
 }
+
+function month() {
+    //次の年月別画面に遷移させる処理(クエリパラメータで年月日をセットしてあげる　　?以降)
+    window.location.href='./month';
+}

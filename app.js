@@ -60,6 +60,28 @@ db.serialize(() => {
 res.sendFile(__dirname + '/public/outgo.html');
 }
 
+app.get('/yearmonthwatch', watch);
+function watch(req, res){
+//console.logはなんの値が入っているのかテスト的に確認したいから書いているので、最終的には消してよい
+console.log(req.query.ymd)
+//DBで登録
+//サーバー側でクエリストリングを取得する書きかた↓
+var getDate=req.query.ymd;
+db.serialize(() => {
+    // db.run("drop table if exists members");
+    db.each("select * from members", (err, row) => {
+        console.log(`${row.ymd} ${row.member} ${row.name} ${row.yen} ${row.kosuu}`);
+    });
+    db.all("select * from members", (err, rows) => {
+        console.log(JSON.stringify(rows));
+        ABC = rows;
+    });
+    db.get("select count(*) from members", (err, count) => {
+        console.log(count["count(*)"]);
+    })
+});
+}
+
 app.get('/outgo', (req, res) => {
   res.sendFile(__dirname + '/public/outgo.html');
   });
@@ -81,3 +103,6 @@ function func2 (req, res){
     
     res.sendFile(__dirname + '/public/homegamen.html')
 };
+app.get('/month', (req, res) => {
+    res.sendFile(__dirname + '/public/month.html');
+    });
