@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<h1>Money Control</h1>
+<script src = "./js/homegamen.js"></script>
+<!--selectDayはjsで取得した年月日を受け取って表示させるためのもの(homegamen.jsで取得します) -->
+<div id = "selectDay"></div>
+    <input type="button" onclick = "clickOutgo()"  id="sisyutu" name="outgo" value="支出"
+    checked>
+    
+    <input type="button" onclick = "location.href='income'" id="syunyu" name="income" value="収入"
+     >
+
+     <input type="button" onclick = "syokikaEve()"  id="delete" name="syokika" value="初期化"
+    checked>
+    <script>
+      function syokikaEve(){
+        var yesOrNo = window.confirm("初期化しますか？");
+        if (yesOrNo){ 
+          window.location.href='/syokika';
+          alert("初期化に成功しました");
+      }
+      }
+    </script>
+  </div>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+ <h1>収入</h1>
+ <div>カテゴリ</div>
+     <select  id="goods" placeholder="カテゴリ">
+        <option></option>
+       <option>給料</option>
+       <option>ボーナス</option>
+       <option>お小遣い</option>
+
+       </select>
+ <div>金額</div>
+     <input type="number" id="yen" placeholder="金額" required
+       minlength="4" maxlength="8" size="10"/>
+ <div>メモ</div>
+     <input type="text" id="kosuu" placeholder="メモ"  required
+       minlength="4" maxlength="8" size="10"/>
+<input class="favorite styled" type="button"
+       value="登録" onclick="clickDisplayAlert()"></input>
+
+<script>
+    function clickDisplayAlert() {  
+        var Goods = document.getElementById("goods").value;
+        var Yen = document.getElementById("yen").value;
+        var Kosuu = document.getElementById("kosuu").value; 
+            if (checkData(Goods, Yen, Kosuu) == 1) {
+               alert("登録できませんでした");
+               return
+            }else {
+
+              var tableElem = document.getElementById("hyou");
+              var trElem = tableElem.tBodies[0].insertRow(-1);
+              var cellElem1 = trElem.insertCell(0);
+              var cellElem2 = trElem.insertCell(1);
+              var cellElem3 = trElem.insertCell(2);
+              var price = 0;
+              var rowElems = tableElem.rows;
+
+              cellElem1.appendChild(document.createTextNode(Goods))
+              cellElem2.appendChild(document.createTextNode(Yen))
+              cellElem3.appendChild(document.createTextNode(Kosuu))
+
+              document.getElementById("goods").value = null;
+              document.getElementById("yen").value = null; 
+              document.getElementById("kosuu").value = null;
+
+              for (i = 1, len = rowElems.length -1; i < len; i++) {
+              var data = rowElems[i].cells[1].innerText;
+                 price +=parseInt(data.replace(/[^0-9]/g, ""));
+                 console.log(rowElems.length);
+              } 
+               document.getElementById('goukei').innerText = "￥" + price;
+               alert("登録しました");
+            }
+         }
+            function checkData (A,B) {
+               let checkFlug = false;
+                if (A == '') {checkFlug = true;}
+                if (B == '') {checkFlug = true;}
+               return checkFlug;
+            }
+
+</script>       
+
+ 
+  
+            <table id= "hyou" border="1">
+              <tbody>
+              <tr>
+                <th>カテゴリ</th>
+                <th>金額</th>
+                <th>メモ</th>
+              </tr>
+              </tbody>
+              <tbody>
+              <tr>
+                 <th>合計</th>
+                 <td id= "goukei" colspan = "2" ></td>
+              </tr>
+              </tbody>
+            </table>
+ </html>

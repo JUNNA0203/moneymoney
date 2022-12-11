@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+ <h1>Money Control</h1>
+ <div>商品名</div>
+<input type="text" id="goods"  required
+       minlength="4" maxlength="8" size="10"/>
+       <div>金額</div>
+       <input type="number" id="yen"  required
+       minlength="4" maxlength="8" size="10"/>
+       <div>個数</div>
+       <input type="number" id="kosuu"  required
+       minlength="4" maxlength="8" size="10"/>
+<input class="favorite styled" type="button"
+       value="登録" onclick="clickDisplayAlert()"></input>
+
+ <script>
+    function clickDisplayAlert() {  
+        var Goods = document.getElementById("goods").value;
+        var Yen = document.getElementById("yen").value;
+        var Kosuu = document.getElementById("kosuu").value; 
+            if (checkData(Goods, Yen, Kosuu) == 1) {
+               alert("登録できませんでした");
+               return
+            }else {
+
+              var tableElem = document.getElementById("hyou");
+              var trElem = tableElem.tBodies[0].insertRow(-1);
+              var cellElem1 = trElem.insertCell(0);
+              var cellElem2 = trElem.insertCell(1);
+              var cellElem3 = trElem.insertCell(2);
+              var cellElem4 = trElem.insertCell(3);
+              var price = 0;
+              var rowElems = tableElem.rows;
+
+              cellElem1.appendChild(document.createTextNode(Goods))
+              cellElem2.appendChild(document.createTextNode(Yen))
+              cellElem3.appendChild(document.createTextNode(Kosuu))
+              cellElem4.appendChild(document.createTextNode("￥" + Yen * Kosuu))
+
+
+              document.getElementById("goods").value = null;
+              document.getElementById("yen").value = null; 
+              document.getElementById("kosuu").value = null;
+
+              for (i = 1, len = rowElems.length -1; i < len; i++) {
+              var data = rowElems[i].cells[3].innerText;
+                 price +=parseInt(data.replace(/[^0-9]/g, ""));
+                 console.log(rowElems.length);
+              } 
+               document.getElementById('goukei').innerText = "￥" + price;
+               alert("登録しました");
+            }
+         }
+            function checkData (A,B,C) {
+               var checkFlug = 0;
+                if (A = "") {document.getElementById("goods").style.color = "red"; checkFlug = 1}
+                if (B = "") {document.getElementById("yen").style.color = "red"; checkFlug = 1}
+                if (C = "") {document.getElementById("kosuu").style.color = "red"; checkFlug = 1}
+                    return checkFlug;
+            }
+            </script>
+            <table id= "hyou" border="1">
+              <tbody>
+              <tr>
+                <th>商品名</th>
+                <th>金額</th>
+                <th>個数</th>
+                <th>小計</th>
+              </tr>
+              </tbody>
+              <tbody>
+              <tr>
+                 <th>合計</th>
+                 <td id= "goukei" colspan = "3" ></td>
+              </tr>
+              </tbody>
+            </table>
+</html>  
