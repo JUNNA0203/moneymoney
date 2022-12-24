@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-<meta charset="utf-8">
-<script src="/js/outgo.js"></script>
-<!-- <div id = "selectDay"></div> -->
- <h1>支出</h1>
- <select id="year">
-  <option value="">-</option>
-  <option value="2022">2022</option>
-  <option value="2023">2023</option>
-  <option value="2024">2024</option>
-  <option value="2025">2025</option>
-  <option value="2026">2026</option>
-  <option value="2027">2027</option>
-  <option value="2028">2028</option>
-  <option value="2029">2029</option>
-  <option value="2030">2030</option>
-  </select>　年
- <select id="month">
-  <option value="">-</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  </select>　月
+  <meta charset="utf-8" />
+  <script src="/js/outgo.js"></script>
+  <!-- <div id = "selectDay"></div> -->
+  <h1>支出</h1>
+  <select id="year">
+    <option value="">-</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+    <option value="2027">2027</option>
+    <option value="2028">2028</option>
+    <option value="2029">2029</option>
+    <option value="2030">2030</option></select
+  >　年
+  <select id="month">
+    <option value="">-</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option></select
+  >　月
   <select id="day">
     <option value="">-</option>
     <option value="1">1</option>
@@ -63,36 +63,72 @@
     <option value="28">28</option>
     <option value="29">29</option>
     <option value="30">30</option>
-    <option value="31">31</option>
-    </select>　日
-    <div>種別</div>
-    <select id="member">
-      <option value="">-</option>
-      <option value="食品">食品</option>
-      <option value="日用品">日用品</option>
-      <option value="交通費">交通費</option>
-      <option value="交際費">交際費</option>
-      <option value="保険">保険</option>
-      <option value="固定費">固定費</option>
-      <option value="その他">その他</option>
-      </select>
- <div>商品名</div>
-     <input type="text" id="goods" placeholder="商品名" required
-        maxlength="8" size="10"/>
- <div>金額</div>
-     <input type="text" id="yen" placeholder="金額" required
-        maxlength="8" size="10" oninput="sanketa()"/>
- <div>個数</div>
-     <input type="number" id="kosuu" placeholder="個数"  required
-       maxlength="8" size="10"/>
-<input class="favorite styled" type="button"
-       value="登録" onclick="clickDisplayAlert()"/>
+    <option value="31">31</option></select
+  >　日
+  <div>種別</div>
+  <select id="member">
+    <option value="">-</option>
+    <option value="食品">食品</option>
+    <option value="日用品">日用品</option>
+    <option value="交通費">交通費</option>
+    <option value="交際費">交際費</option>
+    <option value="保険">保険</option>
+    <option value="固定費">固定費</option>
+    <option value="その他">その他</option>
+  </select>
+  <div>商品名</div>
+  <input
+    type="text"
+    id="goods"
+    placeholder="商品名"
+    required
+    maxlength="8"
+    size="10"
+  />
+  <div>金額</div>
+  <input
+    type="text"
+    id="yen"
+    placeholder="金額"
+    required
+    maxlength="8"
+    size="10"
+    oninput="sanketa()"
+  />
+  <div>個数</div>
+  <input
+    type="number"
+    id="kosuu"
+    placeholder="個数"
+    required
+    maxlength="8"
+    size="10"
+  />
+  <input
+    class="favorite styled"
+    type="button"
+    value="登録"
+    onclick="clickDisplayAlert()"
+  />
 
-       <!-- Reo----------------------- -->
-       <div ><button style="background-color:#000; width: 100px; height:20px; color:#fff; font-size: 5px;" onclick="yenReo()">データ自動入力</button></div>
-       <!-- endReo-------------------- -->
-       
-            <!-- <table id= "hyou" border="1">
+  <!-- Reo----------------------- -->
+  <div>
+    <button
+      style="
+        background-color: #000;
+        width: 100px;
+        height: 20px;
+        color: #fff;
+        font-size: 5px;
+      "
+      onclick="yenReo()"
+    >
+      データ自動入力
+    </button>
+  </div>
+  <!-- endReo-------------------- -->
+
+  <!-- <table id= "hyou" border="1">
               <tbody>
               <tr>
                 <th>商品名</th>
@@ -102,10 +138,10 @@
               </tr>
               </tbody>
               <tbody> -->
-              <!-- <tr>
+  <!-- <tr>
                  <th>合計</th>
                  <td id= "goukei" colspan = "3" ></td>
               </tr> -->
-              <!-- </tbody>
+  <!-- </tbody>
             </table> -->
-</html>  
+</html>
