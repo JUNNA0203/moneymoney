@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>高橋のページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ここにサイト説明を入れます" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1 id="logo">
+          <a href="index.html"
+            ><img src="images/logo.png" alt="Sample Cafe"
+          /></a>
+        </h1>
+      </header>
+
+      <main>
+        <section>
+          <h2>Access<span>アクセス</span></h2>
+
+          <table class="ta1">
+            <caption>
+              案内
+            </caption>
+            <tr>
+              <th>高橋</th>
+              <td>休日は暇。たまに筋トレ</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>
+                静岡駅の場所でも貼っておきます
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13077.513338698158!2d138.37139103955076!3d34.97218700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a49fa03e728b3%3A0x23c1a4887e4776f7!2z6Z2Z5bKh6aeF!5e0!3m2!1sja!2sjp!4v1671893390303!5m2!1sja!2sjp"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td>おしえなーい</td>
+            </tr>
+            <tr>
+              <th>サイトURL</th>
+              <td>おしえなーい</td>
+            </tr>
+          </table>
+        </section>
+      </main>
+
+      <footer>
+        <ul class="icon">
+          <li>
+            <a href="#"
+              ><img
+                src="images/icon_facebook.png"
+                alt="Facebook"
+                onclick="gomen()"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/icon_twitter.png"
+                alt="Twitter"
+                onclick="gomen()"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/icon_instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/icon_youtube.png"
+                alt="YouTube"
+                onclick="gomen()"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/icon_line.png" alt="LINE" onclick="gomen()"
+            /></a>
+          </li>
+        </ul>
+        <small
+          >Copyright&copy; <a href="index.html">Sample Cafe</a> All Rights
+          Reserved.</small
+        >
+        <span class="pr"
+          ><a href="https://template-party.com/" target="_blank"
+            >《Web Design:Template-Party》</a
+          ></span
+        >
+      </footer>
+    </div>
+    <!--/#container-->
+
+    <!--メインメニュー-->
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="reosample.html">Home<span>ホーム</span></a>
+        </li>
+        <li>
+          <a href="menu.html">写真たち<span>写真たち</span></a>
+        </li>
+        <li>
+          <a href="access.html">Access<span>アクセス</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--jQueryファイルの読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--パララックス（inview）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="js/jquery.inview_set.js"></script>
+
+    <!--メニュー開閉用のスクリプト-->
+    <div id="menubar_hdr"></div>
+    <script src="js/openclose_tp.js"></script>
+
+    <!--ページの上部へ戻るボタン-->
+    <p class="pagetop"><a href="#">↑</a></p>
+  </body>
+</html>
+<script>
+  function gomen() {
+    alert("ごめんなさい。用意してないです。");
+  }
+</script>

@@ -106,3 +106,8 @@ function month() {
   //次の年月別画面に遷移させる処理(クエリパラメータで年月日をセットしてあげる　　?以降)
   window.location.href = "./month";
 }
+
+// 高橋ページ遷移処理
+function clickReobutton() {
+  window.location.href = "/reosample";
+}

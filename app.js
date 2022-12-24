@@ -131,3 +131,8 @@ function func2(req, res) {
 app.get("/month", (req, res) => {
   res.sendFile(__dirname + "/public/month.html");
 });
+
+//高橋お試しページへの遷移---------------------------------------------------
+app.get("/reosample", (req, res) => {
+  res.sendFile(__dirname + "/public/reosample.html");
+});

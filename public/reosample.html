@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="utf-8" />
+  <script src="/js/reosample.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>高橋のページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="レオの好きなように使えるページです" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1 id="logo">
+          <a href="index.html"
+            ><img src="images/logo.png" alt="Sample Cafe"
+          /></a>
+        </h1>
+      </header>
+
+      <main>
+        <section>
+          <h2>About<span>このページについて</span></h2>
+          <p class="c">高橋が遊ぶためのページです</p>
+          <p><img src="images/1.jpg" alt="" /></p>
+          <p>修善寺で撮ったやつ</p>
+        </section>
+
+        <section id="about">
+          <h3>
+            ページ右上メニューバーから「写真たち」を選ぶと高橋の写真が見れます。
+          </h3>
+        </section>
+
+        <section>
+          <h2>写真をとりあえず綺麗に並べてみる</h2>
+
+          <p class="c">
+            <strong class="color-theme">富士山</strong><br />
+            <img src="images/mtfuji.jpeg" alt="" class="blur" />
+          </p>
+          <p class="c">
+            <strong class="color-theme">桜</strong><br />
+            <img src="images/sakura.jpeg" alt="" class="up" />
+          </p>
+          <p class="c">
+            <strong class="color-theme">紅葉</strong><br />
+            <img src="images/koyo.jpeg" alt="" class="transform1" />
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <ul class="icon">
+          <li>
+            <a href="#"
+              ><img src="images/icon_instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/icon_youtube.png" alt="YouTube" /></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!--/#container-->
+
+    <!--メインメニュー-->
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="reosample.html">Home<span>ホーム</span></a>
+        </li>
+        <li>
+          <a href="menu.html">写真たち<span>写真たち</span></a>
+        </li>
+        <li>
+          <a href="access.html">Access<span>アクセス</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--jQueryファイルの読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--パララックス（inview）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="js/jquery.inview_set.js"></script>
+
+    <!--メニュー開閉用のスクリプト-->
+    <div id="menubar_hdr"></div>
+    <script src="js/openclose_tp.js"></script>
+
+    <!--ページの上部へ戻るボタン-->
+    <p class="pagetop"><a href="#">↑</a></p>
+  </body>
+</html>
+<script>
+  function gomen() {
+    alert("ごめんなさい。用意してないです。");
+  }
+</script>

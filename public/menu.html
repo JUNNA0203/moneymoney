@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>高橋の写真</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ここにサイト説明を入れます" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1 id="logo">
+          <a href="index.html"
+            ><img src="images/logo.png" alt="高橋の写真"
+          /></a>
+        </h1>
+      </header>
+
+      <main>
+        <section>
+          <h2>
+            とりあえず画像をたくさん配置<span
+              >画像データ大きすぎると重くなるみたい</span
+            >
+          </h2>
+
+          <div class="list-container up">
+            <div class="list">
+              <figure><img src="images/a.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>大学に虹</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/b.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>まつぼっくりちゃん</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/c.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>green</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/d.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>人参の芽</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/e.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/f.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/g.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+
+            <div class="list">
+              <figure><img src="images/h.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+            <div class="list">
+              <figure><img src="images/i.jpeg" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+            <div class="list">
+              <figure><img src="images/j.JPG" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+            <div class="list">
+              <figure><img src="images/k.JPG" alt="" /></figure>
+              <h4></h4>
+              <p>写真</p>
+            </div>
+          </div>
+
+          <!--/.list-container-->
+        </section>
+
+        <section>
+          <h2>リストも使えるらしい</h2>
+
+          <dl class="textmenu up">
+            <dt></dt>
+            <dd>写真</dd>
+            <dt></dt>
+            <dd>写真</dd>
+            <dt></dt>
+            <dd>写真</dd>
+            <dt></dt>
+            <dd>写真</dd>
+            <dt></dt>
+            <dd>写真</dd>
+            <dt></dt>
+            <dd>写真</dd>
+            <dt></dt>
+            <dd>写真</dd>
+          </dl>
+        </section>
+      </main>
+
+      <footer>
+        <ul class="icon">
+          <li>
+            <a href="#"
+              ><img
+                src="images/icon_facebook.png"
+                alt="Facebook"
+                onclick="gomen()"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/icon_twitter.png"
+                alt="Twitter"
+                onclick="gomen()"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/icon_instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="images/icon_youtube.png"
+                alt="YouTube"
+                onclick="gomen()"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/icon_line.png" alt="LINE" onclick="gomen()"
+            /></a>
+          </li>
+        </ul>
+        <small
+          >Copyright&copy; <a href="index.html"></a> All Rights Reserved.</small
+        >
+      </footer>
+    </div>
+    <!--/#container-->
+
+    <!--メインメニュー-->
+    <nav id="menubar">
+      <ul>
+        <li>
+          <a href="reosample.html">Home<span>ホーム</span></a>
+        </li>
+        <li>
+          <a href="menu.html">写真たち<span>写真たち</span></a>
+        </li>
+        <li>
+          <a href="access.html">Access<span>アクセス</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--jQueryファイルの読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--パララックス（inview）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="js/jquery.inview_set.js"></script>
+
+    <!--メニュー開閉用のスクリプト-->
+    <div id="menubar_hdr"></div>
+    <script src="js/openclose_tp.js"></script>
+
+    <!--ページの上部へ戻るボタン-->
+    <p class="pagetop"><a href="#">↑</a></p>
+  </body>
+</html>
+<script>
+  function gomen() {
+    alert("ごめんなさい。用意してないです。");
+  }
+</script>
