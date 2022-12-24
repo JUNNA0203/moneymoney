@@ -3,9 +3,11 @@ const app = express();
 const sqlite3 = require("sqlite3");
 var ABC = "";
 app.use(express.static('public'));
+//支出ページへの遷移---------------------------------------------------
 app.get('/', (req, res) => {
 res.sendFile(__dirname + '/public/calendar.html');
 });
+//------------------------------------------------------------------
 app.get('/outgolist', (req, res) => {
     res.sendFile(__dirname + '/public/outgolist.html');
     });
@@ -82,18 +84,24 @@ db.serialize(() => {
 });
 }
 
+//支出ページへの遷移---------------------------------------------------
 app.get('/outgo', (req, res) => {
   res.sendFile(__dirname + '/public/outgo.html');
   });
+
+//収入ページへの遷移---------------------------------------------------
 app.get('/income', (req, res) => {
     res.sendFile(__dirname + '/public/income.html');
     });
+//ホーム画面への遷移---------------------------------------------------    
 app.get('/homegamen', (req, res) => {
         res.sendFile(__dirname + '/public/homegamen.html');
         });
 app.listen(3000, () => {
 console.log("connect");
 });
+
+//データベースの初期化---------------------------------------------------
 app.get('/syokika', func2);
 function func2 (req, res){
     db.serialize(() => {
@@ -103,6 +111,8 @@ function func2 (req, res){
     
     res.sendFile(__dirname + '/public/homegamen.html')
 };
+
+//月別詳細検索画面への遷移---------------------------------------------------
 app.get('/month', (req, res) => {
     res.sendFile(__dirname + '/public/month.html');
     });
